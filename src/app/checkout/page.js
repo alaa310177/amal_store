@@ -67,21 +67,32 @@ export default function CheckoutPage() {
     }
   }
 
-  if (success) {
+      if (success) {
+    const waMessage = `مرحباً، قمت بتسجيل طلب جديد على متجر أم رباح 🛍️%0aالاسم: ${form.customer_name}%0aالهاتف: ${form.customer_phone}%0aالمدينة: ${form.city}%0aطريقة الدفع: ${form.payment_method === 'cod' ? 'نقداً عند الاستلام' : 'شام كاش'}`
+
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center p-8">
           <div className="text-6xl mb-6">✅</div>
           <h2 className="text-3xl font-bold text-white mb-4">تم استلام طلبك!</h2>
           <p className="text-purple-300 mb-8">سنتواصل معك قريباً على رقم هاتفك</p>
-          <a href="/" className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition-colors">
+          
+          {/* زر واتساب */}
+          <a 
+            href={`https://wa.me/963998028910?text=${waMessage}`}
+            target="_blank"
+            className="bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition-colors block mb-4 text-center"
+          >
+            💬 تواصل معنا على واتساب
+          </a>
+
+          <a href="/" className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition-colors block text-center">
             العودة للمتجر
           </a>
         </div>
       </div>
     )
   }
-
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* الهيدر */}
