@@ -102,7 +102,8 @@ export default async function Home() {
 
       {/* Footer */}
       <footer className="bg-white border-t py-4 md:py-6 px-4 md:px-8 text-center text-zinc-500 text-sm">
-        © 2026 أم رباح - جميع الحقوق محفوظة
+      © 2026 أم رباح - جميع الحقوق محفوظة
+        <a href="/admin" className="text-white mr-2 select-none">•</a>
       </footer>
     </div>
   );
