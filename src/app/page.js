@@ -1,12 +1,9 @@
-export default function Home() {
-  const products = [
-    { id: 1, name: "فستان قطني مورد", price: "38,000 ل.س",imgs:"/images/عقدة.png"},
-    { id: 2, name: "بنطال جينز ولادي", price: "25,000 ل.س",imgs:"/images/عطر.png" },
-    { id: 3, name: "بيجاما رجالي ", price: "140,000 ل.س" ,imgs:"/images/فستان.png"},
-    { id: 4, name: "بكلات بناتي", price: "2,000 ل.س" ,imgs:"/images/عقدة.png"},
-    { id: 5, name: "بنطلون محير حركات", price: "35,000 ل.س" ,imgs:"/images/عقدة.png"},
-  ];
-
+import { supabase } from '../lib/supabase'
+export default async function Home() {
+  const { data: products } = await supabase
+    .from('products')
+    .select('*')
+    .eq('is_active', true)
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* الهيدر */}
