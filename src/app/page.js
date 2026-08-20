@@ -10,28 +10,30 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* الهيدر */}
-      <header className="relative bg-black shadow-sm py-4 px-4 overflow-hidden flex items-center justify-between min-h-[160px] md:min-h-[300px]">
+      <header className="relative bg-black shadow-sm overflow-hidden flex flex-col items-center justify-center min-h-[250px] md:min-h-[350px] py-6">
         
-        {/* اللوجو */}
+        {/* اللوجو في المنتصف وكبير */}
         <video 
           src="/videos/logo.mp4" 
           autoPlay loop muted playsInline 
-          className="h-32 md:h-40 w-auto relative z-10"
+          className="h-40 md:h-56 w-auto relative z-10"
           style={{ mixBlendMode: 'screen' }}
         />
 
-        {/* العناصر المتطايرة */}
-        <div className="absolute left-0 top-0 bottom-0 flex flex-col justify-around px-2">
-          <span className="floating-item">
-            <img src="/images/عقدة.png" width={70} className="md:w-[150px]"/>
-          </span>
-          <span className="floating-item-delay">
-            <img src="/images/فستان.png" width={60} className="md:w-[130px]"/>
-          </span>
-          <span className="floating-item">
-            <img src="/images/عطر.png" width={60} className="md:w-[130px]"/>
-          </span>
-        </div>
+        {/* عنصر يسار */}
+        <span className="floating-item absolute top-4 left-4 z-20">
+          <img src="/images/عقدة.png" width={90} className="md:w-[180px]"/>
+        </span>
+
+        {/* عنصر وسط يسار */}
+        <span className="floating-item-delay absolute bottom-4 left-16 z-20">
+          <img src="/images/فستان.png" width={80} className="md:w-[160px]"/>
+        </span>
+
+        {/* عنصر يمين */}
+        <span className="floating-item absolute bottom-4 right-4 z-20">
+          <img src="/images/عطر.png" width={80} className="md:w-[160px]"/>
+        </span>
 
       </header>
 
