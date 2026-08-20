@@ -10,30 +10,29 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* الهيدر */}
-      <header dir="ltr" className="relative bg-black overflow-hidden flex flex-row items-center justify-between px-4 h-40 md:h-56">
-        {/* العناصر المتطايرة - يسار */}
-          <div className="flex flex-row justify-around h-full py-2 gap-2 mx-4">
-            <span className="floating-item mt-10 md:mt-15">
-              <img src="/images/عقدة.png" width={300} className="md:w-[600px]"/>
-              </span>
-            <span className="floating-item-delay mt-18 md:mt-20">
-              <img src="/images/فستان.png" width={300} className="md:w-[600px]"/>
-            </span>
-            <span className="floating-item mt-10 md:mt-15">
-              <img src="/images/عطر.png" width={300} className="md:w-[400px]"/>
-            </span>
-          </div>
+<header dir="ltr" className="relative bg-black overflow-hidden flex flex-row items-center justify-between px-4 h-50 md:h-60">
+  {/* h-64 بدلاً من h-52 للجوال، و h-80 بدلاً من h-64 للتابلت */}
+  
+  <div className="flex flex-row justify-around items-center h-full py-2 w-2/5">
+    <span className="floating-item">
+      <img src="/images/عقدة.png" className="w-300 md:w-400"/>
+    </span>
+    <span className="floating-item-delay mt-6 md:mt-10">
+      <img src="/images/فستان.png" className="w-300 md:w-400"/>
+    </span>
+    <span className="floating-item">
+      <img src="/images/عطر.png" className="w-300 md:w-400"/>
+    </span>
+  </div>
 
-        {/* اللوجو - يمين وكبير */}
-        <video 
-          src="/videos/logo.mp4" 
-          autoPlay loop muted playsInline 
-          className="h-32 md:h-120 w-auto"
-          style={{ mixBlendMode: 'screen' }}
-        />
+  <video 
+    src="/videos/logo.mp4" 
+    autoPlay loop muted playsInline 
+    className="w-3/5 h-auto"
+    style={{ mixBlendMode: 'screen' }}
+  />
 
-      </header>
-
+</header>
       <div className="relative bg-black">
         <svg className="w-full h-12 md:h-16 -mb-1" viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,50 C120,90 240,10 360,50 C480,90 600,10 720,50 C840,90 960,10 1080,50 C1200,90 1320,10 1440,50 L1440,100 L0,100 Z" fill="#9c20b5"/>
