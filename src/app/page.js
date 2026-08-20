@@ -10,20 +10,19 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* الهيدر */}
-      <header className="relative bg-black overflow-hidden flex flex-row items-center justify-between px-4 h-40 md:h-56">
-        
+      <header dir="ltr" className="relative bg-black overflow-hidden flex flex-row items-center justify-between px-4 h-40 md:h-56">
         {/* العناصر المتطايرة - يسار */}
-        <div className="flex flex-col justify-around h-full py-2 gap-1">
-          <span className="floating-item">
-            <img src="/images/عقدة.png" width={55} className="md:w-[120px]"/>
-          </span>
-          <span className="floating-item-delay">
-            <img src="/images/فستان.png" width={50} className="md:w-[110px]"/>
-          </span>
-          <span className="floating-item">
-            <img src="/images/عطر.png" width={50} className="md:w-[110px]"/>
-          </span>
-        </div>
+          <div className="flex flex-col justify-around h-full py-2 gap-2 mx-4">
+            <span className="floating-item">
+              <img src="/images/عقدة.png" width={90} className="md:w-[160px]"/>
+              </span>
+            <span className="floating-item-delay">
+              <img src="/images/فستان.png" width={85} className="md:w-[150px]"/>
+            </span>
+            <span className="floating-item">
+              <img src="/images/عطر.png" width={85} className="md:w-[150px]"/>
+            </span>
+          </div>
 
         {/* اللوجو - يمين وكبير */}
         <video 
