@@ -12,15 +12,15 @@ export default async function Home() {
       {/* الهيدر */}
       <header dir="ltr" className="relative bg-black overflow-hidden flex flex-row items-center justify-between px-4 h-40 md:h-56">
         {/* العناصر المتطايرة - يسار */}
-          <div className="flex flex-col justify-around h-full py-2 gap-2 mx-4">
-            <span className="floating-item">
-              <img src="/images/عقدة.png" width={90} className="md:w-[160px]"/>
+          <div className="flex flex-row justify-around h-full py-2 gap-2 mx-4">
+            <span className="floating-item ">
+              <img src="/images/عقدة.png" width={120} className="md:w-[600px]"/>
               </span>
-            <span className="floating-item-delay">
-              <img src="/images/فستان.png" width={85} className="md:w-[150px]"/>
+            <span className="floating-item-delay mt-10 md:mt-15">
+              <img src="/images/فستان.png" width={110} className="md:w-[600px]"/>
             </span>
             <span className="floating-item">
-              <img src="/images/عطر.png" width={85} className="md:w-[150px]"/>
+              <img src="/images/عطر.png" width={120} className="md:w-[400px]"/>
             </span>
           </div>
 
@@ -28,7 +28,7 @@ export default async function Home() {
         <video 
           src="/videos/logo.mp4" 
           autoPlay loop muted playsInline 
-          className="h-32 md:h-48 w-auto"
+          className="h-32 md:h-100 w-auto"
           style={{ mixBlendMode: 'screen' }}
         />
 
