@@ -10,30 +10,40 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* الهيدر */}
-<header dir="ltr" className="relative bg-black overflow-hidden flex flex-row items-center justify-between px-4 h-50 md:h-60">
-  {/* h-64 بدلاً من h-52 للجوال، و h-80 بدلاً من h-64 للتابلت */}
+
+<header dir="ltr" className="relative bg-black overflow-hidden flex flex-row items-center justify-between px-4 h-64 md:h-80">
   
-  <div className="flex flex-row justify-around items-center h-full py-2 w-2/5">
+  {/* العناصر المتطايرة - يسار (أفقي) */}
+  <div className="flex flex-row justify-around items-center h-full py-2 ">
     <span className="floating-item">
-      <img src="/images/عقدة.png" className="w-300 md:w-400"/>
+      <img 
+        src="/images/عقدة.png" 
+        className="w-150 md:w-700 h-auto"  // 👈 أضفت h-auto
+      />
     </span>
-    <span className="floating-item-delay mt-6 md:mt-10">
-      <img src="/images/فستان.png" className="w-300 md:w-400"/>
+    <span className="floating-item-delay mt-6 md:mt-20">
+      <img 
+        src="/images/فستان.png" 
+        className="w-150 md:w-600 h-auto"  // 👈 أضفت h-auto
+      />
     </span>
     <span className="floating-item">
-      <img src="/images/عطر.png" className="w-300 md:w-400"/>
+      <img 
+        src="/images/عطر.png" 
+        className="w-150 md:w-500 h-auto"  // 👈 أضفت h-auto
+      />
     </span>
   </div>
 
+  {/* اللوجو - يمين */}
   <video 
     src="/videos/logo.mp4" 
     autoPlay loop muted playsInline 
-    className="w-3/5 h-auto"
+    className="w-2/5 h-auto"
     style={{ mixBlendMode: 'screen' }}
   />
 
-</header>
-      <div className="relative bg-black">
+</header>      <div className="relative bg-black">
         <svg className="w-full h-12 md:h-16 -mb-1" viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,50 C120,90 240,10 360,50 C480,90 600,10 720,50 C840,90 960,10 1080,50 C1200,90 1320,10 1440,50 L1440,100 L0,100 Z" fill="#9c20b5"/>
         </svg>
