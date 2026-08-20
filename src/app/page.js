@@ -10,36 +10,47 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* الهيدر */}
-      <header className="relative bg-black shadow-sm py-6 px-8 overflow-hidden">
-        <video src="/videos/logo.mp4" autoPlay loop muted playsInline className="h-100 w-auto"/>
-        <span className="floating-item absolute top-10 left-5"><img src="/images/عقدة.png" width={300}/></span>
-        <span className="floating-item-delay absolute top-40 left-60 text-9xl"><img src="/images/فستان.png" width={250}></img></span>
-        <span className="floating-item absolute top-60 left-5"><img src="/images/عطر.png" width={250}/></span>
+      <header className="relative bg-black shadow-sm py-4 md:py-6 px-4 md:px-8 overflow-hidden min-h-[200px] md:min-h-[300px]">
+        <video 
+          src="/videos/logo.mp4" 
+          autoPlay loop muted playsInline 
+          className="h-16 md:h-24 w-auto relative z-10"
+          style={{ mixBlendMode: 'screen' }}
+        />
+        <span className="floating-item absolute top-4 md:top-10 left-2 md:left-5">
+          <img src="/images/عقدة.png" width={120} className="md:w-[300px]"/>
+        </span>
+        <span className="floating-item-delay absolute top-16 md:top-40 left-24 md:left-60">
+          <img src="/images/فستان.png" width={100} className="md:w-[250px]"/>
+        </span>
+        <span className="floating-item absolute top-28 md:top-60 left-2 md:left-5">
+          <img src="/images/عطر.png" width={100} className="md:w-[250px]"/>
+        </span>
       </header>
 
       <div className="relative bg-black">
-        <svg className="w-full h-16 -mb-1" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <svg className="w-full h-12 md:h-16 -mb-1" viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,50 C120,90 240,10 360,50 C480,90 600,10 720,50 C840,90 960,10 1080,50 C1200,90 1320,10 1440,50 L1440,100 L0,100 Z" fill="#9c20b5"/>
         </svg>
       </div>
 
       {/* القسم الرئيسي Hero */}
-      <main className="flex flex-col items-center justify-center text-center px-6 py-20 bg-[#9c20b5]">
-        <h2 className="text-4xl font-bold text-white mb-4">
-          مرحباً بكم  ..عروضنا الأسبوعية لا تنتهي
+      <main className="flex flex-col items-center justify-center text-center px-4 md:px-6 py-12 md:py-20 bg-[#9c20b5]">
+        <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
+          مرحباً بكم ..عروضنا الأسبوعية لا تنتهي
         </h2>
-        <p className="text-lg text-zinc-300 max-w-md mb-8">
+        <p className="text-base md:text-lg text-zinc-300 max-w-md mb-8">
           أناقة وملابس وإكسسوارات مختارة بعناية، خصيصاً لكم
         </p>
       </main>
 
       {/* قسم المنتجات */}
-      <section className="px-8 py-16 max-w-6xl mx-auto">
-        <h3 className="text-2xl font-bold text-zinc-900 mb-8 text-center">
+      <section className="px-4 md:px-8 py-10 md:py-16 max-w-6xl mx-auto">
+        <h3 className="text-xl md:text-2xl font-bold text-zinc-900 mb-6 md:mb-8 text-center">
           🎁عروض الأسبوع🎁
         </h3>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {products?.map((product, index) => (
             <Link
               href={`/products/${product.id}`}
@@ -52,14 +63,14 @@ export default async function Home() {
                 src={product.image_url}
                 alt={product.name}
                 className={`w-full object-cover ${
-                  index === 0 ? "h-96" : "h-40"
+                  index === 0 ? "h-48 md:h-96" : "h-28 md:h-40"
                 }`}
               />
-              <div className="p-3">
-                <h4 className="font-medium text-zinc-900 text-sm">
+              <div className="p-2 md:p-3">
+                <h4 className="font-medium text-zinc-900 text-xs md:text-sm">
                   {product.name}
                 </h4>
-                <p className="text-zinc-500 text-sm">{product.price} ل.س</p>
+                <p className="text-zinc-500 text-xs md:text-sm">{product.price} ل.س</p>
               </div>
             </Link>
           ))}
@@ -67,7 +78,7 @@ export default async function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white border-t py-6 px-8 text-center text-zinc-500">
+      <footer className="bg-white border-t py-4 md:py-6 px-4 md:px-8 text-center text-zinc-500 text-sm">
         © 2026 أمل - جميع الحقوق محفوظة
       </footer>
     </div>

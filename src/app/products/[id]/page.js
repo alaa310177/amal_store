@@ -58,11 +58,13 @@ export default async function ProductPage({ params }) {
             المتوفر: {product.stock_quantity} قطعة
           </p>
 
-          <button className="bg-black text-white py-4 px-8 rounded-full text-lg
-            hover:bg-purple-700 transition-colors duration-300">
-            🛒 اطلب الآن
-          </button>
-        </div>
+          <a
+            href={`/checkout?product=${product.id}&name=${product.name}&price=${product.price}`}
+            className="bg-black text-white py-4 px-8 rounded-full text-lg
+            hover:bg-purple-700 transition-colors duration-300 text-center block"
+>
+                🛒 اطلب الآن
+          </a>        </div>
       </div>
     </div>
   )
