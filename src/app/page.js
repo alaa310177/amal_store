@@ -10,40 +10,48 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* الهيدر */}
-
-<header dir="ltr" className="relative bg-black overflow-hidden flex flex-row items-center justify-between px-4 h-64 md:h-80">
+<header dir="ltr" className="relative bg-black overflow-hidden flex flex-col items-center px-4 py-1">
   
-  {/* العناصر المتطايرة - يسار (أفقي) */}
-  <div className="flex flex-row justify-around items-center h-full py-2 ">
-    <span className="floating-item">
+  {/* اللوجو - في الأعلى */}
+  <video 
+    src="/videos/logo.mp4" 
+    autoPlay loop muted playsInline 
+    className="w-full md:w-11/12 h-auto max-h-44 md:max-h-100"
+    style={{ mixBlendMode: 'screen' }}
+    aria-label="شعار المتجر"
+  />
+
+
+  {/* العناصر المتطايرة - مع حركات محسنة */}
+  <div className="flex flex-row justify-around items-center w-full -mt-2 md:-mt-3">
+    <span className="floating-item hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
       <img 
         src="/images/عقدة.png" 
-        className="w-150 md:w-700 h-auto"  // 👈 أضفت h-auto
+        className="w-800 md:w-150 h-auto"
+        alt="عقدة"
+        loading="lazy"
       />
     </span>
-    <span className="floating-item-delay mt-6 md:mt-20">
+    <span className="floating-item-delay mt-2 md:mt-3 hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
       <img 
         src="/images/فستان.png" 
-        className="w-150 md:w-600 h-auto"  // 👈 أضفت h-auto
+        className="w-70 md:w-100 h-auto"
+        alt="فستان"
+        loading="lazy"
       />
     </span>
-    <span className="floating-item">
+    <span className="floating-item hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
       <img 
         src="/images/عطر.png" 
-        className="w-150 md:w-500 h-auto"  // 👈 أضفت h-auto
+        className="w-70 md:w-100 h-auto"
+        alt="عطر"
+        loading="lazy"
       />
     </span>
   </div>
 
-  {/* اللوجو - يمين */}
-  <video 
-    src="/videos/logo.mp4" 
-    autoPlay loop muted playsInline 
-    className="w-2/5 h-auto"
-    style={{ mixBlendMode: 'screen' }}
-  />
-
-</header>      <div className="relative bg-black">
+</header>
+    <div className="relative bg-black">
         <svg className="w-full h-12 md:h-16 -mb-1" viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,50 C120,90 240,10 360,50 C480,90 600,10 720,50 C840,90 960,10 1080,50 C1200,90 1320,10 1440,50 L1440,100 L0,100 Z" fill="#9c20b5"/>
         </svg>
