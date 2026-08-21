@@ -35,7 +35,7 @@ export default async function Home() {
     <span className="floating-item-delay mt-2 md:mt-3 hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
       <img 
         src="/images/فستان.png" 
-        className="w-80 md:w-100 h-auto"
+        className="w-120 md:w-100 h-auto"
         alt="فستان"
         loading="lazy"
       />
