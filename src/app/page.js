@@ -27,7 +27,7 @@ export default async function Home() {
     <span className="floating-item hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
       <img 
         src="/images/عقدة.png" 
-        className="w-70 md:w-100 h-auto"
+        className="w-90 md:w-100 h-auto"
         alt="عقدة"
         loading="lazy"
       />
@@ -35,7 +35,7 @@ export default async function Home() {
     <span className="floating-item-delay mt-2 md:mt-3 hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
       <img 
         src="/images/فستان.png" 
-        className="w-70 md:w-100 h-auto"
+        className="w-80 md:w-100 h-auto"
         alt="فستان"
         loading="lazy"
       />
@@ -43,7 +43,7 @@ export default async function Home() {
     <span className="floating-item hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
       <img 
         src="/images/عطر.png" 
-        className="w-28 md:w-44 h-auto"
+        className="w-75 md:w-44 h-auto"
         alt="عطر"
         loading="lazy"
       />
