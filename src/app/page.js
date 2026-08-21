@@ -23,11 +23,11 @@ export default async function Home() {
 
 
   {/* العناصر المتطايرة - مع حركات محسنة */}
-  <div className="flex flex-row justify-around items-center w-full -mt-2 md:-mt-3">
+  <div className="flex flex-col justify-around items-center w-full -mt-2 md:-mt-3">
     <span className="floating-item hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
       <img 
         src="/images/عقدة.png" 
-        className="w-800 md:w-150 h-auto"
+        className="w-800 md:w-full h-auto"
         alt="عقدة"
         loading="lazy"
       />
