@@ -102,7 +102,7 @@ export default async function Home() {
 
       {/* Footer */}
       <footer className="bg-white border-t py-4 md:py-6 px-4 md:px-8 text-center text-zinc-500 text-sm">
-        © 2026 أمل - جميع الحقوق محفوظة
+        © 2026 أم رباح - جميع الحقوق محفوظة
       </footer>
     </div>
   );
