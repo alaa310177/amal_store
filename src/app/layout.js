@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "أمل | متجر الأزياء والإكسسوارات",
+  title: "أم رباح | متجر الأزياء والإكسسوارات",
   description: "أناقة، ملابس، وإكسسوارات مختارة بعناية، خصيصاً لكم",
 };
 
