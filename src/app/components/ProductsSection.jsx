@@ -26,9 +26,6 @@ export default function ProductsSection({ products }) {
 
   return (
     <section className="px-4 md:px-8 py-10 md:py-16 max-w-6xl mx-auto">
-      <h3 className="text-xl md:text-2xl font-bold text-zinc-900 mb-6 text-center">
-        🎁 عروض الأسبوع 🎁
-      </h3>
 
       {/* البحث */}
       <div className="relative mb-6">

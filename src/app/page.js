@@ -43,7 +43,7 @@ export default async function Home() {
       {/* Hero */}
       <main className="flex flex-col items-center justify-center text-center px-4 md:px-6 py-12 md:py-20 bg-[#9c20b5]">
         <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
-          مرحباً بكم ..عروضنا الأسبوعية لا تنتهي
+         مرحباً بكم ...
         </h2>
         <p className="text-base md:text-lg text-zinc-300 max-w-md mb-8">
           أناقة وملابس وإكسسوارات مختارة بعناية، خصيصاً لكم
